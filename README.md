@@ -3,11 +3,10 @@ A Java-based Placement Analytics project that analyzes placement data using CSV 
 This project helps in understanding company hiring trends, student performance, package distribution, and placement statistics.
 
 Features:
-Read and analyze CSV data, 
-Company-wise placement analysis, 
-Student performance tracking, 
-Package statistics, 
-Simple Java implementation.
+- Reads CSV placement data
+- Finds highest paying company
+- Displays hiring statistics
+- Java-based analytics system
 
 Technologies Used:
 Java, 
