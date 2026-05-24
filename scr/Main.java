@@ -3,12 +3,17 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Main {
+
     public static void main(String[] args) {
 
-        String file = "data/placements.csv";
+        String file = "data/placement.csv";
         String line;
 
+        double highestPackage = 0;
+        String topCompany = "";
+
         try {
+
             BufferedReader br = new BufferedReader(new FileReader(file));
 
             // Skip header row
@@ -28,11 +33,22 @@ public class Main {
                 System.out.println("Students Hired: " + hired);
                 System.out.println("Average Package: " + packageLpa + " LPA");
                 System.out.println("---------------------------");
+
+                double packageValue = Double.parseDouble(packageLpa);
+
+                if (packageValue > highestPackage) {
+                    highestPackage = packageValue;
+                    topCompany = company;
+                }
             }
 
             br.close();
 
+            System.out.println("\nTop Paying Company: " + topCompany);
+            System.out.println("Highest Package: " + highestPackage + " LPA");
+
         } catch (IOException e) {
+
             System.out.println("Error reading file");
         }
     }
