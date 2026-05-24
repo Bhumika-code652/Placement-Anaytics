@@ -1,35 +1,36 @@
-Placement Analytics:
-A Java-based Placement Analytics project that analyzes placement data using CSV files.
-This project helps in understanding company hiring trends, student performance, package distribution, and placement statistics.
+# Placement Analytics System
 
-Features:
-Read and analyze CSV data, 
-Company-wise placement analysis, 
-Student performance tracking, 
-Package statistics, 
-Simple Java implementation.
+## Overview
+This project is built using Java and CSV data analysis.
 
-Technologies Used:
-Java, 
-CSV Files, 
-VS Code / IntelliJ IDEA.
+The system reads placement data from a CSV file and analyzes:
+- Company hiring details
+- Average package
+- Highest paying company
+- Branch-wise placement information
 
-Project Structure:
-src/ → Java source code ; 
-data/ → CSV dataset files ;
-README.md → Project documentation .
+## Technologies Used
+- Java
+- CSV File Handling
+- VS Code
+- GitHub
 
-How to Run:
-1. Clone the repository
-2. Open the project in VS Code or IntelliJ
-3. Run the Java file
-4. Make sure CSV files are inside the data folder
+## Features
+- Reads placement data from CSV
+- Displays hiring statistics
+- Finds highest paying company
+- Simple analytics system
 
-Future Improvements:
-Add charts and graphs, 
-Create GUI dashboard, 
-Database integration, 
-Real-time analytics.
+## Project Structure
+Placement-Analytics/
+├── data/
+│ └── placement.csv
+├── src/
+│ └── Main.java
+└── README.md
 
-Author ~ 
-Bhumika 
+## Future Improvements
+- GUI Dashboard
+- Charts and Graphs
+- Database Integration
+- Advanced Analytics
