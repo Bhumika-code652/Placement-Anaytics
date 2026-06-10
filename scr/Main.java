@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -5,6 +6,12 @@ import java.io.IOException;
 public class Main {
 
     public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+
+    System.out.print("Enter company name to search: ");
+    String searchCompany = sc.nextLine();
+
+    boolean found = false;
 
         String file = "data/placement.csv";
         String line;
@@ -37,12 +44,34 @@ public class Main {
 
             while ((line = br.readLine()) != null) {
 
+                
+                
+
+                
+               
+
                 String[] data = line.split(",");
 
                 String company = data[0];
                 String branch = data[1];
                 String hired = data[2];
                 String packageLpa = data[3];
+
+                if (company.equalsIgnoreCase(searchCompany)) {
+
+                    System.out.println("\n===== COMPANY FOUND =====");
+                    System.out.println("Company: " + company);
+                    System.out.println("Branch: " + branch);
+                    System.out.println("Students Hired: " + hired);
+                    System.out.println("Package: " + packageLpa + " LPA");
+
+                    found = true; 
+                }  
+                 
+                if (!found) {
+                System.out.println("\nCompany not found.");
+                }
+                sc.close();
 
                 System.out.println("Company: " + company);
                 System.out.println("Branch: " + branch);
