@@ -20,6 +20,7 @@ public class Main {
         String topCompany = "";
         int totalCompanies = 0;
         int totalStudents = 0;
+        
 
         double totalPackage = 0;
 
@@ -35,6 +36,8 @@ public class Main {
 
         int premiumCompanies = 0;
 
+        int eligibleStudents = 600; // total eligible students
+
         try {
 
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -43,12 +46,6 @@ public class Main {
             br.readLine();
 
             while ((line = br.readLine()) != null) {
-
-                
-                
-
-                
-               
 
                 String[] data = line.split(",");
 
@@ -67,17 +64,17 @@ public class Main {
 
                     found = true; 
                 }  
-                 
-                if (!found) {
-                System.out.println("\nCompany not found.");
+                 if (!found) {
+                    System.out.println("\nCompany not found.");
                 }
-                sc.close();
+                sc.close(); 
+               
 
-                System.out.println("Company: " + company);
-                System.out.println("Branch: " + branch);
-                System.out.println("Students Hired: " + hired);
-                System.out.println("Average Package: " + packageLpa + " LPA");
-                System.out.println("---------------------------");
+               // System.out.println("Company: " + company);
+               // System.out.println("Branch: " + branch);
+                //System.out.println("Students Hired: " + hired);
+               // System.out.println("Average Package: " + packageLpa + " LPA");
+               // System.out.println("---------------------------");
 
                 double packageValue = Double.parseDouble(packageLpa);
 
@@ -116,17 +113,19 @@ public class Main {
                 else if (branch.equals("IT")) {
                     itCount += hiredCount;
                 }
+                
+              
             }
 
             br.close();
 
-            System.out.println("\nTop Paying Company: " + topCompany);
-            System.out.println("Highest Package: " + highestPackage + " LPA");
+           // System.out.println("\nTop Paying Company: " + topCompany);
+            //System.out.println("Highest Package: " + highestPackage + " LPA");
 
-            System.out.println("Lowest Paying Company: " + lowestCompany);
-            System.out.println("Lowest Package: " + lowestPackage + " LPA");
+           // System.out.println("Lowest Paying Company: " + lowestCompany);
+           // System.out.println("Lowest Package: " + lowestPackage + " LPA");
             
-            System.out.println("Companies offering More Than 10 LPA: " + premiumCompanies );
+           // System.out.println("Companies offering More Than 10 LPA: " + premiumCompanies );
 
             double averagePackage = totalPackage / totalCompanies;
 
@@ -147,7 +146,15 @@ public class Main {
             System.out.println("\nBranch-wise Hiring:");
             System.out.println("CSE Students Hired: " + cseCount);
             System.out.println("ECE Students Hired: " + eceCount);
-            System.out.println("IT Students Hired: " + itCount);  
+            System.out.println("IT Students Hired: " + itCount); 
+            
+            double placementPercentage =
+                  ((double) totalStudents / eligibleStudents) * 100;
+
+            System.out.println("Placement Percentage: "
+                  + placementPercentage + "%");
+
+                 
 
         } catch (IOException e) {
 
