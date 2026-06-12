@@ -1,37 +1,45 @@
 # Placement Analytics System
 
 ## Overview
-This project is built using Java and CSV data analysis.
-
-
-The system reads placement data from a CSV file and analyzes:
-- Company hiring details
-- Average package
-- Highest paying company
-- Branch-wise placement information
+A Java-based analytics system that reads placement data from a CSV file and generates placement insights and statistics.
 
 ## Technologies Used
 - Java
 - CSV File Handling
-- VS Code
+- Git
 - GitHub
+- VS Code
 
 ## Features
-- Reads placement data from CSV
-- Displays hiring statistics
-- Finds highest paying company
-- Simple analytics system
+- Read placement data from CSV files
+- Search company details
+- Find highest paying company
+- Find lowest paying company
+- Calculate average package
+- Count total companies
+- Count total students hired
+- Identify top hiring company
+- Branch-wise hiring analysis
+- Count companies offering more than 10 LPA
+- Calculate placement percentage
 
 ## Project Structure
 Placement-Analytics/
 ├── data/
-│ └── placement.csv
+│   └── placement.csv
 ├── src/
-│ └── Main.java
+│   └── Main.java
 └── README.md
 
+## Sample Analytics
+- Top Paying Company
+- Lowest Paying Company
+- Average Package
+- Placement Percentage
+- Branch-wise Hiring Statistics
+
 ## Future Improvements
-- GUI Dashboard
+- Java Swing GUI
 - Charts and Graphs
-- Database Integration
-- Advanced Analytics
+- MySQL Database Integration
+- Export Reports to PDF/Excel
