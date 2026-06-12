@@ -1,4 +1,4 @@
-company_name,branch,hired_students,average_package_lpa
+company_name,branch,hired_students,average_package_lpa,lowest_company,premium_companies
 TCS,CSE,120,4.5
 Infosys,ECE,80,5.2
 Wipro,CSE,60,4.8
