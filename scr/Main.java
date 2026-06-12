@@ -122,11 +122,6 @@ public class Main {
            // System.out.println("\nTop Paying Company: " + topCompany);
             //System.out.println("Highest Package: " + highestPackage + " LPA");
 
-           // System.out.println("Lowest Paying Company: " + lowestCompany);
-           // System.out.println("Lowest Package: " + lowestPackage + " LPA");
-            
-           // System.out.println("Companies offering More Than 10 LPA: " + premiumCompanies );
-
             double averagePackage = totalPackage / totalCompanies;
 
             System.out.println("\n===== ANALYTICS REPORT =====");
@@ -134,8 +129,12 @@ public class Main {
             System.out.println("Top Paying Company: " + topCompany);
             System.out.println("Highest Package: " + highestPackage + " LPA");
 
-            System.out.println("Total Companies: " + totalCompanies);
+            System.out.println("Lowest Paying Company: " + lowestCompany);
+            System.out.println("Lowest Package: " + lowestPackage + " LPA");
 
+            System.out.println("Companies offering More Than 10 LPA: " + premiumCompanies );
+
+            System.out.println("Total Companies: " + totalCompanies);
             System.out.println("Total Students Hired: " + totalStudents);
 
             System.out.println("Average Package: " + averagePackage + " LPA");
